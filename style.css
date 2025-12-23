@@ -36,8 +36,6 @@ body {
     color: rgb(117, 57, 0);
 }
 
-
-
 /* HERO */
 .hero {
     position: relative;
@@ -115,15 +113,14 @@ body {
 }
 .news-img {
     width: 100%;
-    height: 160px;   /* výška obrázku, NE celé karty */
+    height: 160px;   
     overflow: hidden;
 }
 
-/* SAMOTNÝ OBRÁZEK */
 .news-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* TADY má být */
+    object-fit: cover; 
 }
 .news-item p {
     padding: 15px;
@@ -201,4 +198,62 @@ body {
     border-top: 1px solid #474747;
     font-size: 13px;
     color: #888;
+}
+
+/* RESPONZIVITA*/
+
+/* TABLET */
+@media (max-width: 1024px) {
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .news {
+        padding: 40px 20px;
+    }
+}
+
+/* MOBIL */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    
+    .nav a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr; 
+        height: auto;
+    }
+
+    .hero-img {
+        height: 250px;
+    }
+
+    .btn-primary {
+        width: 80%;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .news-item:hover {
+        transform: none; 
+    }
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-socials .social-icons {
+        display: flex;
+        justify-content: center;
+    }
 }
