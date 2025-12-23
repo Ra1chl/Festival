@@ -246,6 +246,44 @@ body {
     padding: 0 15px;
 }
 
+
+.mapa {
+    width: 100%;
+    max-width: 1000px; /* Aby mapa nebyla až příliš obrovská na PC */
+    margin: 40px auto; /* Vycentrování sekce a mezera od hlavičky */
+    padding: 0 20px;   /* Mezera od krajů na mobilu */
+    text-align: center;
+}
+
+.mapa img {
+    width: 100%;       /* Roztáhne se na celou šířku kontejneru */
+    height: auto;
+    border-radius: 20px; /* Zaoblené rohy vypadají u mapy skvěle */
+    border: 2px solid orange;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Trocha hloubky */
+}
+
+/* SEKCE INFO */
+.info {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.info h2 {
+    color: orange;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.info h3 {
+    font-weight: normal;
+    margin-bottom: 10px;
+    color: #925800;
+}
 /* RESPONZIVITA*/
 
 /* TABLET */
@@ -310,5 +348,11 @@ body {
     .program {
         grid-template-columns: 1fr; 
         padding: 20px;
+    }
+    .mapa {
+        margin: 20px auto;
+    }
+    .info h2 {
+        font-size: 20px;
     }
 }
