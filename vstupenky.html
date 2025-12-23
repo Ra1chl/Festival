@@ -16,7 +16,41 @@
         <a href="vstupenky.html">VSTUPENKY</a>
     </nav>
 
-    
+    <section class="vstupenky-sekce">
+    <div class="form-container">
+        <h2>Koupit vstupenky</h2>
+        <p>Vyplňte údaje a my vám zašleme platební instrukce na e-mail.</p>
+
+        <form action="#" method="POST" class="vstupenky-form">
+            <div class="form-group">
+                <label for="name">Jméno a příjmení</label>
+                <input type="text" id="name" name="name" placeholder="Jan Novák" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="vas@email.cz" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ticket-type">Typ vstupenky</label>
+                <select id="ticket-type" name="ticket-type" required>
+                    <option value="" disabled selected>Vyberte si...</option>
+                    <option value="standard">Standard (Celofestivalová) - 1 500 Kč</option>
+                    <option value="vip">VIP (All Inclusive) - 3 500 Kč</option>
+                    <option value="one-day">Jednodenní - 800 Kč</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">Počet kusů</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+            </div>
+
+            <button onclick="window.location.href='index.html'" class="btn-submit">ODESLAT OBJEDNÁVKU</button>
+        </form>
+    </div>
+</section>
 </header>
 </body>
 </html>
