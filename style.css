@@ -200,6 +200,52 @@ body {
     color: #888;
 }
 
+.program {
+    display: grid;
+    /* Tady říkáme: vytvoř 3 sloupce, každý stejně široký (1fr) */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; /* Mezera mezi kartami */
+    padding: 60px;
+    max-width: 1200px;
+    margin: 0 auto; /* Vycentrování celého bloku na střed */
+}
+
+/* JEDNOTLIVÁ KARTA (ITEM) */
+.program-item {
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.program-item:hover {
+    transform: translateY(-10px); /* Karta při najetí lehce poskočí nahoru */
+    border-color: orange;
+}
+
+/* OBRÁZEK ARTISTA */
+.program-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.program-item h3 {
+    color: orange;
+    margin-bottom: 10px;
+    padding: 0 15px;
+}
+
+.program-item p {
+    font-size: 14px;
+    color: #ccc;
+    padding: 0 15px;
+}
+
 /* RESPONZIVITA*/
 
 /* TABLET */
@@ -210,6 +256,10 @@ body {
     
     .news {
         padding: 40px 20px;
+    }
+    .program {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px;
     }
 }
 
@@ -255,5 +305,10 @@ body {
     .footer-socials .social-icons {
         display: flex;
         justify-content: center;
+    }
+
+    .program {
+        grid-template-columns: 1fr; 
+        padding: 20px;
     }
 }
