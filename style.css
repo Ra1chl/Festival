@@ -19,15 +19,20 @@ body {
     align-items: center;      
     text-align: center;
 }
+.logo-link {
+    text-decoration: none; 
+    display: inline-block; 
+}
 
 .logo {
-    font-size: 42px;
+    font-size: 60px;
     color: orange;
     margin-bottom: 30px;
 }
 
 .nav a {
     margin: 0 20px;
+    font-size: 25px;
     text-decoration: none;
     color: orange;
     font-weight: bold;
@@ -62,10 +67,10 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    
+    font-weight: bold;
     z-index: 10;
     padding: 18px 36px;
-    font-size: 18px;
+    font-size: 30px;
     background-color: orange;
     border: none;
     cursor: pointer;
@@ -202,12 +207,11 @@ body {
 
 .program {
     display: grid;
-    /* Tady říkáme: vytvoř 3 sloupce, každý stejně široký (1fr) */
     grid-template-columns: repeat(3, 1fr); 
-    gap: 30px; /* Mezera mezi kartami */
+    gap: 30px; 
     padding: 60px;
     max-width: 1200px;
-    margin: 0 auto; /* Vycentrování celého bloku na střed */
+    margin: 0 auto; 
 }
 
 /* JEDNOTLIVÁ KARTA (ITEM) */
@@ -222,7 +226,7 @@ body {
 }
 
 .program-item:hover {
-    transform: translateY(-10px); /* Karta při najetí lehce poskočí nahoru */
+    transform: translateY(-10px); 
     border-color: orange;
 }
 
@@ -249,18 +253,18 @@ body {
 
 .mapa {
     width: 100%;
-    max-width: 1000px; /* Aby mapa nebyla až příliš obrovská na PC */
-    margin: 40px auto; /* Vycentrování sekce a mezera od hlavičky */
-    padding: 0 20px;   /* Mezera od krajů na mobilu */
+    max-width: 1000px; 
+    margin: 40px auto;
+    padding: 0 20px;   
     text-align: center;
 }
 
 .mapa img {
-    width: 100%;       /* Roztáhne se na celou šířku kontejneru */
+    width: 100%;       
     height: auto;
-    border-radius: 20px; /* Zaoblené rohy vypadají u mapy skvěle */
+    border-radius: 20px; 
     border: 2px solid orange;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Trocha hloubky */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
 }
 
 /* SEKCE INFO */
@@ -365,6 +369,64 @@ body {
     background-color: rgb(200, 110, 0);
     transform: translateY(-2px);
 }
+
+/* SUCCESS STRÁNKA */
+.success-container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.success-card {
+    background-color: #111;
+    padding: 50px;
+    border-radius: 20px;
+    border: 2px solid orange;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 0 30px rgba(255, 165, 0, 0.2);
+}
+
+.check-icon {
+    font-size: 60px;
+    color: black;
+    background-color: orange;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 30px;
+}
+
+.success-card h2 {
+    color: orange;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.success-details {
+    margin: 20px 0 40px;
+    color: #ccc;
+}
+
+.btn-primary-static {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: orange;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.btn-primary-static:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
 /* RESPONZIVITA*/
 
 /* TABLET */
@@ -438,5 +500,12 @@ body {
     }
     .form-container {
         padding: 25px;
+    }
+
+    .success-card {
+        padding: 30px 20px;
+    }
+    .success-card h2 {
+        font-size: 28px;
     }
 }
